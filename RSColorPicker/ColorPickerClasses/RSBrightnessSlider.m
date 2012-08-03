@@ -153,7 +153,11 @@ UIImage* RSArrowLoopThumbImage(CGSize size, CGSize loopSize){
 		
 		self.enabled = YES;
 		self.userInteractionEnabled = YES;
-		
+        
+        [self setMinimumTrackImage:[UIImage imageNamed:@"color_slider_track.png"] forState:UIControlStateNormal];
+		[self setMaximumTrackImage:[UIImage imageNamed:@"color_slider_track.png"] forState:UIControlStateNormal];
+        [self setThumbImage:[UIImage imageNamed:@"color_slider_nub.png"] forState:UIControlStateNormal];
+        
 		[self addTarget:self action:@selector(myValueChanged:) forControlEvents:UIControlEventValueChanged];
 	}
 	return self;
