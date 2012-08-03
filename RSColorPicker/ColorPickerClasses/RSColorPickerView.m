@@ -115,8 +115,11 @@ void HSVFromPixel(BMPixel pixel, CGFloat* h, CGFloat* s, CGFloat* v) {
     selectionView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 18.0, 18.0)];
     selectionView.backgroundColor = [UIColor clearColor];
     selectionView.layer.borderWidth = 2.0;
-    selectionView.layer.borderColor = [UIColor colorWithWhite:0.1 alpha:1.0].CGColor;
+    selectionView.layer.borderColor = [UIColor colorWithWhite:1.0 alpha:1.0].CGColor;
     selectionView.layer.cornerRadius = 9.0;
+    selectionView.layer.shadowColor = [UIColor blackColor].CGColor;
+    selectionView.layer.shadowOffset = CGSizeMake(0, 2.0);
+    selectionView.layer.shadowOpacity = 0.7;
     [self updateSelectionLocation];
     [self addSubview:selectionView];
     
